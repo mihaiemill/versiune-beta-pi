@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectează Domeniul</title>
+</head>
+<body>
+    <form id="quizForm">
+        <label for="domain">Alege domeniul:</label>
+        <select id="domain" name="domain">
+            <option value="matematica">Matematică</option>
+            <option value="istorie">Istorie</option>
+            <option value="stiinte">Științe</option>
+        </select><br><br>
+        <button type="button" onclick="startQuiz()">Începe Quiz-ul</button>
+    </form>
+
+    <script>
+        function startQuiz() {
+            var domain = document.getElementById('domain').value;
+            window.location.href = 'quiz.html?domain=' + domain;
+        }
+    </script>
+</body>
+</html>
